@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        pri: "#1782fe",
         accent: "#ababae",
       },
     },
