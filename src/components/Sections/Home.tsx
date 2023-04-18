@@ -50,6 +50,13 @@ export default function Home() {
               className="fa-sharp fa-regular fa-envelope text-white"
             ></i>
           </div>
+          <div
+            className="col-span-3 text-3xl flex flex-row"
+            onClick={() => scrollToSection("about")}
+          >
+            <span className=" text-accent">Lets make something great</span>
+            <i className="text-sm fas fa-long-arrow-down text-accent"></i>
+          </div>
         </div>
       </Slide>
     </section>
