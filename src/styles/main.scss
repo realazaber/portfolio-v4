@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  * {
+    @apply duration-300 scroll-smooth text-accent;
+  }
+
+  html {
+    body {
+
+      a {
+        @apply hover:cursor-pointer hover:text-blue-500;
+      }
+
+      section {
+        @apply w-full mx-auto h-[100vh] flex flex-col justify-center items-center;
+
+        .grid {
+          div {
+            @apply hover:cursor-pointer hover:shadow-md border-2 border-accent rounded-2xl p-3 flex flex-row justify-center items-center min-w-[10rem];
+            i {
+              @apply w-full h-full flex justify-center items-center text-5xl hover:scale-125;
+            }
+          }
+        }
+      }
+    }
+  }
+}
