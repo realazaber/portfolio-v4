@@ -51,11 +51,12 @@ export default function Home() {
             ></i>
           </div>
           <div
-            className="col-span-3 text-3xl flex flex-row"
+            className="col-span-3 text-3xl"
             onClick={() => scrollToSection("about")}
           >
-            <span className=" text-accent">Lets make something great</span>
-            <i className="text-sm fas fa-long-arrow-down text-accent"></i>
+            
+            <span className="text-accent w-4/5">Lets make something great</span>
+            <b className="fas fa-long-arrow-down text-accent w-1/5 text-3xl"></b>
           </div>
         </div>
       </Slide>
