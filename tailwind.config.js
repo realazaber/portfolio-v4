@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         pri: "#1782fe",
+        sec: "#ffffff",
         accent: "#ababae",
       },
     },
