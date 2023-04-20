@@ -1,9 +1,9 @@
 export default function TechStack() {
   return (
-    <div id="techstack" className="w-3/5 mx-auto">
+    <div id="techstack" className="w-4/5 tablet:w-3/5 mx-auto">
       <h2>What I know</h2>
-      <div className="flex flex-row my-3 gap-3">
-        <div className="w-1/4">
+      <div className="flex flex-col tablet:flex-row my-3 gap-3">
+        <div className="w-full tablet:w-1/4">
           <h3>Languages</h3>
           <ul>
             <span>
@@ -32,7 +32,7 @@ export default function TechStack() {
             </span>
           </ul>
         </div>
-        <div className="w-1/4">
+        <div className="w-full tablet:w-1/4">
           <h3>Frameworks</h3>
           <ul>
             <span>
@@ -53,7 +53,7 @@ export default function TechStack() {
             </span>
           </ul>
         </div>
-        <div className="w-1/4">
+        <div className="w-full tablet:w-1/4">
           <h3>CMSs</h3>
           <ul>
             <span>
@@ -66,7 +66,7 @@ export default function TechStack() {
             </span>
           </ul>
         </div>
-        <div className="w-1/4">
+        <div className="w-full tablet:w-1/4">
           <h3>Tools</h3>
           <ul>
             <span>
