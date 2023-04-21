@@ -1,6 +1,6 @@
 export default function TechStack() {
   return (
-    <div id="techstack" className="w-4/5 tablet:w-3/5 mx-auto">
+    <div id="techstack">
       <h2>What I know</h2>
       <div className="flex flex-col tablet:flex-row my-3 gap-3">
         <div className="w-full tablet:w-1/4">
