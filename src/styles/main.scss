@@ -33,7 +33,7 @@
       }
 
       .container {
-        @apply w-4/5 mx-auto;
+        @apply w-4/5 mx-auto py-5 border-2 border-red-500;
   
         .vertical-timeline-element-icon {
             @apply flex justify-center items-center;
@@ -90,6 +90,10 @@
 
       .section-sec {
         @apply bg-pri text-sec w-full;
+
+        h2, h3, p {
+          @apply text-sec;
+        }
       }
 
       button, .btn, .btn-sec {
