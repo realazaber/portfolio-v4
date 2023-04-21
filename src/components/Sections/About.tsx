@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
-import TechStack from "../TechStack";
+import TechStack from "./TechStack";
 
 export default function About() {
   return (
