@@ -1,6 +1,6 @@
 import Home from "@/components/Sections/Home";
 import About from "@/components/Sections/About";
-import Bio from "@/components/Bio";
+import Bio from "@/components/Sections/Bio";
 import Experience from "@/components/Sections/Experience";
 import Projects from "@/components/Sections/Projects";
 import Testimonials from "@/components/Sections/Testimonials";
