@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
-
+import MobileNav from "./MobileNav";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -12,22 +12,27 @@ export default function Nav() {
   };
 
   return (
-    <nav className="p-3 w-full flex flex-row justify-between items-center fixed top-0 left-0 right-0 bg-white z-10">
+    <nav className="p-3 w-full flex flex-row justify-between items-center fixed top-0 left-0 right-0 bg-white z-10 mx-auto">
       <a onClick={() => scrollToSection("home")}>
-        <Image className="object-cover w-64 h-24" src="/images/azaber.webp" width={100} height={100} />
+        <Image
+          className="object-cover w-64 h-24"
+          src="/images/azaber.webp"
+          width={100}
+          height={100}
+        />
       </a>
-      <div className="flex flex-row gap-5 items-center text-pri h-24">
+      <div className="hidden tablet:flex flex-row gap-5 items-center text-pri h-24">
         <a onClick={() => scrollToSection("about")}>About</a>
         <a onClick={() => scrollToSection("experience")}>Experience</a>
         <a onClick={() => scrollToSection("projects")}>Projects</a>
-        <a href="/blog">Blog <i className="fas fa-external-link-alt"></i></a>
-        <a
-          className="btn"
-          onClick={() => scrollToSection("contact")}
-        >
+        <a href="/blog">
+          Blog <i className="fas fa-external-link-alt"></i>
+        </a>
+        <a className="btn" onClick={() => scrollToSection("contact")}>
           Contact
         </a>
       </div>
+      <MobileNav />
     </nav>
   );
 }
