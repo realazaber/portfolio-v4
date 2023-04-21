@@ -24,8 +24,9 @@ export default function Home() {
   const m_showMe = () => setShowMe(true);
 
   return (
-    <section id="home">
-      <Modal show={showAus} onHide={m_closeAus}>
+    <section id="home" className="container">
+     
+     <Modal show={showAus} onHide={m_closeAus}>
         <Modal.Header closeButton>
           <Modal.Title>🇵🇱 from 🇦🇺</Modal.Title>
         </Modal.Header>
@@ -60,11 +61,12 @@ export default function Home() {
             onClick={() => scrollToSection("techstack")}
           >
             <div>
-              <div className="flex flex-row gap-6 w-5/6">
-                <i className="fa-brands fa-drupal text-[#009cde]"></i>
-                <i className="fa-brands fa-angular text-[#e32e34]"></i>
-                <i className="fa-brands fa-react text-[#61dcfc]"></i>
-                <i className="fa-brands fa-php text-[#878db7]"></i>
+              <div className="flex flex-row flex-wrap gap-6 w-5/6 justify-center items-center mx-auto">
+                <i className="text-4xl fa-brands fa-drupal text-[#009cde]"></i>
+                <i className="text-4xl fa-brands fa-angular text-[#e32e34]"></i>
+                <i className="text-4xl fa-brands fa-react text-[#61dcfc]"></i>
+                <i className="text-4xl fa-brands fa-php text-[#878db7]"></i>
+                <i className="text-4xl fab fa-java text-[#f8981c]"></i>
               </div>
               <div
                 className="text-right text-accent max-h-[1rem]"
@@ -76,7 +78,7 @@ export default function Home() {
           </div>
           <div className="bg-[#21262d] col-span-1 border-none cell">
             <Link href="https://github.com/realazaber" target="_blank">
-              <i className="fa-brands fa-github text-white"></i>
+              <i className="fa-brands fa-github text-white text-3xl"></i>
             </Link>
           </div>
 
@@ -85,11 +87,11 @@ export default function Home() {
               href="https://www.linkedin.com/in/alexander-zaborski-a7b7951a4/"
               target="_blank"
             >
-              <i className="fa-brands fa-linkedin-in text-white"></i>
+              <i className="fa-brands fa-linkedin-in text-white text-3xl"></i>
             </Link>
           </div>
           <div className="bg-blue-500 col-span-1 border-none cell">
-            <i className="fa-brands fa-blogger-b text-white"></i>
+            <i className="fa-brands fa-blogger-b text-white text-3xl"></i>
           </div>
           <div
             className="tablet:col-span-2 text-3xl cell text-accent"
@@ -101,7 +103,7 @@ export default function Home() {
           <div className="bg-[#f15a24] col-span-2 tablet:col-span-1 border-none cell">
             <i
               onClick={() => scrollToSection("contact")}
-              className="fa-sharp fa-regular fa-envelope text-white"
+              className="fa-sharp fa-regular fa-envelope text-white text-3xl"
             ></i>
           </div>
           <div
@@ -115,6 +117,7 @@ export default function Home() {
           </div>
         </div>
       </Slide>
+     
     </section>
   );
 }
