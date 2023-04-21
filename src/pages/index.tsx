@@ -1,5 +1,6 @@
 import Home from "@/components/Sections/Home";
 import About from "@/components/Sections/About";
+import Bio from "@/components/Bio";
 import Experience from "@/components/Sections/Experience";
 import Projects from "@/components/Sections/Projects";
 import Testimonials from "@/components/Sections/Testimonials";
@@ -11,6 +12,7 @@ export default function Index() {
     <>
       <Home />
       <About />
+      <Bio />
       <Experience />
       <Projects />
       <Testimonials />
