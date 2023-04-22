@@ -9,7 +9,7 @@ export default function Experience() {
     <section id="experience" className="container">
       <h2 className="w-full text-left">Experience</h2>
 
-      <VerticalTimeline>
+      <VerticalTimeline animate={false}>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           date="Jul 2022 - March 2023"
