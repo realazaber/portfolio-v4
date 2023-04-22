@@ -10,6 +10,8 @@
     @apply duration-300 scroll-smooth;
   }
 
+  
+
   html {
     body {
 
@@ -29,11 +31,10 @@
         a {
           @apply text-pri;
         }
-        
       }
 
       .container {
-        @apply w-4/5 mx-auto py-5 border-2 border-red-500;
+        @apply w-4/5 mx-auto py-5;
   
         .vertical-timeline-element-icon {
             @apply flex justify-center items-center;
@@ -54,10 +55,7 @@
         .vertical-timeline-element-date {
           @apply text-accent;
         }
-      }
-
-
-      
+      }    
 
       section {
         @apply w-full mx-auto tablet:min-h-[100vh] flex flex-col justify-center items-center;
