@@ -1,3 +1,4 @@
+import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import Image from "next/image";
 import Slide from "react-reveal/Slide";
@@ -13,7 +14,7 @@ export default function Contact() {
             <h2>Thanks for contacting me!</h2>
             <Image
               className="w-52 h-52 object-contain"
-              src={"/images/me.webp"}
+              src={"/images/thanks.gif"}
               height={300}
               width={300}
               alt="me"
@@ -26,48 +27,64 @@ export default function Contact() {
 
   return (
     <section id="contact">
-      <div className="container">
+      <div className="container flex flex-col gap-3 justify-center items-center">
         <h2>Contact</h2>
         <form
-          className="flex flex-col justify-center items-center w-3/5 mx-auto"
+          className="mx-auto tablet:min-h-[30rem] flex flex-col justify-center items-center gap-3"
           onSubmit={handleSubmit}
         >
-          <label>
-            <span>
-              Name <b>*</b>
-            </span>
-            <input type="text" name="name" required />
-          </label>
-          <label htmlFor="email">
-            <span>
-              Email <b>*</b>
-            </span>
-            <input id="email" type="email" name="email" required />
-            <ValidationError
-              prefix="Email"
-              field="email"
-              errors={state.errors}
-            />
-          </label>
+          <div className="flex flex-col-reverse tablet:flex-row justify-center items-center gap-3 w-full ">
+            <div className="w-full tablet:w-1/2 h-full">
+              {" "}
+              <label>
+                <span>
+                  Name <b>*</b>
+                </span>
+                <input type="text" name="name" required />
+              </label>
+              <label htmlFor="email">
+                <span>
+                  Email <b>*</b>
+                </span>
+                <input id="email" type="email" name="email" required />
+                <ValidationError
+                  prefix="Email"
+                  field="email"
+                  errors={state.errors}
+                />
+              </label>
+              <label>
+                <span>Phone</span>
+                <input type="number" name="phone" />
+              </label>
+              <label htmlFor="message">
+                <span>
+                  Message <b>*</b>
+                </span>
+                <textarea id="message" name="message" required />
+                <ValidationError
+                  prefix="Message"
+                  field="message"
+                  errors={state.errors}
+                />
+              </label>
+            </div>
+            <div className="w-full tablet:w-1/2 h-full">
+              <Image
+                className="w-full h-full object-cover rounded-md tablet:h-[30rem]"
+                src={"/images/do_it.gif"}
+                height={300}
+                width={300}
+                alt="contact"
+              />
+            </div>
+          </div>
 
-          <label>
-            <span>Phone</span>
-            <input type="number" name="phone" />
-          </label>
-
-          <label htmlFor="message">
-            <span>
-              Message <b>*</b>
-            </span>
-            <textarea id="message" name="message" required />
-            <ValidationError
-              prefix="Message"
-              field="message"
-              errors={state.errors}
-            />
-          </label>
-
-          <button className="btn" type="submit" disabled={state.submitting}>
+          <button
+            className="btn mx-auto w-full tablet:w-auto"
+            type="submit"
+            disabled={state.submitting}
+          >
             Submit
           </button>
         </form>
