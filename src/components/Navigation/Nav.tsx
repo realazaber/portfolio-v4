@@ -19,6 +19,7 @@ export default function Nav() {
           src="/images/azaber.webp"
           width={100}
           height={100}
+          alt="logo"
         />
       </a>
       <div className="hidden tablet:flex flex-row gap-5 items-center text-pri h-24">
