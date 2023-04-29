@@ -42,7 +42,7 @@ export default function Project() {
           src={project.mainImg}
           alt={project.title}
         />
-        <div className="absolute px-3 top-0 left-0 right-0 bottom-0 w-full h-[inherit] z-30 flex flex-wrap justify-center items-center text-white">
+        <div className="absolute px-3 top-0 left-0 right-0 bottom-0 w-3/5 mx-auto h-[inherit] z-30 flex flex-wrap justify-center items-center text-white">
           <div className="w-1/2">
             <h1 className="text-white font-semibold">{project.title}</h1>
           </div>
