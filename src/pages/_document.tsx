@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <script
           src="https://kit.fontawesome.com/1e1f15503e.js"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></script>
         <script
           dangerouslySetInnerHTML={{
@@ -22,6 +22,7 @@ export default function Document() {
           `,
           }}
         />
+        <title>Azaber Portfolio</title>
       </Head>
       <body className="flex flex-col">
         <Main />
