@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Footer() {
   const [open, setOpen] = useState(false);
@@ -39,9 +40,9 @@ export default function Footer() {
         >
           Projects
         </a>
-        <a className="text-pri hover:text-blue-700" href="/blog">
-          Blog
-        </a>
+        <Link href="https://personal-blog-ten-bice.vercel.app/" target="_blank">
+          Blog <i className="fas fa-external-link-alt"></i>
+        </Link>
         <a
           className="text-pri hover:text-blue-700"
           onClick={() => scrollToSection("contact")}

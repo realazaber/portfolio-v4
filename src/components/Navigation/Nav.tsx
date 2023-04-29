@@ -1,18 +1,24 @@
 import { useState } from "react";
 import Image from "next/image";
 import MobileNav from "./MobileNav";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
 
   const scrollToSection = (id) => {
+    if (router.pathname !== "/") {
+      router.push("/");
+    }
     const element = document.getElementById(id);
-    element.scrollIntoView({ behavior: "smooth" });
+    element?.scrollIntoView({ behavior: "smooth" });
     setOpen(false);
   };
 
   return (
-    <nav className="p-3 w-full flex flex-row justify-between items-center fixed top-0 left-0 right-0 bg-white z-10 mx-auto">
+    <nav className="p-3 w-full flex flex-row justify-between items-center fixed top-0 left-0 right-0 z-20 bg-white z-10 mx-auto">
       <a onClick={() => scrollToSection("home")}>
         <Image
           className="object-cover w-64 h-24"
@@ -26,9 +32,9 @@ export default function Nav() {
         <a onClick={() => scrollToSection("about")}>About</a>
         <a onClick={() => scrollToSection("experience")}>Experience</a>
         <a onClick={() => scrollToSection("projects")}>Projects</a>
-        <a href="/blog">
+        <Link href="https://personal-blog-ten-bice.vercel.app/" target="_blank">
           Blog <i className="fas fa-external-link-alt"></i>
-        </a>
+        </Link>
         <a className="btn" onClick={() => scrollToSection("contact")}>
           Contact
         </a>
