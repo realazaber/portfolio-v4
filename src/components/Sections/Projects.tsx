@@ -21,7 +21,7 @@ export default function Projects() {
   return (
     <section id="projects">
       <div className="container text-pri flex flex-col gap-5">
-        <h2>Projects</h2>
+        <h2 className="mb-5">Projects</h2>
         {projects
           .filter((project) => project.acf.is_main_project == "true")
           .map((project, index) => (
