@@ -9,7 +9,7 @@ export default function MainProject(props: any) {
       }`}
     >
       <div
-        className={`w-full phone:w-1/2 h-3/5 p-3 z-10 bg-blue-800 opacity-95 text-white flex flex-col justify-center items-center ${
+        className={`w-full phone:w-1/2 h-3/5 p-3 z-10 bg-blue-800 rounded-b-md phone:rounded-b-none opacity-95 text-white flex flex-col justify-center items-center ${
           props.reverse ? "phone:ml-[-3rem]" : "phone:mr-[-3rem]"
         }`}
       >
