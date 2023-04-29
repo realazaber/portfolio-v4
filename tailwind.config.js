@@ -13,11 +13,11 @@ module.exports = {
         accent: "#ababae",
       },
       screens: {
-        phone: "600px",
-        // => @media (min-width: 600px) { ... }
+        phone: "875px",
+        // => @media (min-width: 875px) { ... }
 
         tablet: "1000px",
-        // => @media (min-width: 850px) { ... }
+        // => @media (min-width: 1000px) { ... }
 
         desktop: "1280px",
         // => @media (min-width: 1280px) { ... }
