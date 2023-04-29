@@ -51,6 +51,14 @@ export default function TechStack() {
               <i className="fa-brands fa-laravel text-[#e32e34]"></i>
               Laravel
             </span>
+            <span>
+              <i className="fab fa-bootstrap text-[#880bfb]"></i>
+              Bootstrap
+            </span>
+            <span>
+              <i className="fa-solid fa-wind text-[#08b6d5]"></i>
+              Tailwind
+            </span>
           </ul>
         </div>
         <div className="w-full tablet:w-1/4">
