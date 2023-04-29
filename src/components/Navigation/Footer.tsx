@@ -1,13 +1,19 @@
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Footer() {
   const [open, setOpen] = useState(false);
 
+  const router = useRouter();
+
   const scrollToSection = (id) => {
+    if (router.pathname !== "/") {
+      router.push("/");
+    }
     const element = document.getElementById(id);
-    element.scrollIntoView({ behavior: "smooth" });
+    element?.scrollIntoView({ behavior: "smooth" });
     setOpen(false);
   };
 
