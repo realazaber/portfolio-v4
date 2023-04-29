@@ -95,7 +95,12 @@ export default function Home() {
             </Link>
           </div>
           <div className="bg-blue-500 col-span-1 border-none cell">
-            <i className="fa-brands fa-blogger-b text-white text-3xl"></i>
+            <Link
+              href="https://personal-blog-ten-bice.vercel.app/"
+              target="_blank"
+            >
+              <i className="fa-brands fa-blogger-b text-white text-3xl"></i>
+            </Link>
           </div>
           <div
             className="tablet:col-span-2 text-3xl cell text-accent"
