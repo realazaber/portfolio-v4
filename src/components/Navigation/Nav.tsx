@@ -18,7 +18,7 @@ export default function Nav() {
   };
 
   return (
-    <nav className="p-3 w-full flex flex-row justify-between items-center fixed top-0 left-0 right-0 z-20 bg-white z-10 mx-auto">
+    <nav className="p-3 w-full flex flex-row justify-between items-center fixed top-0 left-0 right-0 z-50 bg-white z-10 mx-auto">
       <a onClick={() => scrollToSection("home")}>
         <Image
           className="object-cover w-64 h-24"
