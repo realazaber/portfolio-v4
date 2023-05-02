@@ -21,7 +21,7 @@
         label {
           @apply flex flex-col gap-3 w-full my-3 text-accent;
           b {
-            @apply text-red-500;
+            @apply text-xs;
           }
           input,
           textarea {
