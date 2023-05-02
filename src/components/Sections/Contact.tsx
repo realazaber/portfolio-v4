@@ -37,15 +37,11 @@ export default function Contact() {
             <div className="w-full tablet:w-1/2 h-full">
               {" "}
               <label>
-                <span>
-                  Name <b>*</b>
-                </span>
+                <span>Name</span>
                 <input type="text" name="name" required />
               </label>
               <label htmlFor="email">
-                <span>
-                  Email <b>*</b>
-                </span>
+                <span>Email</span>
                 <input id="email" type="email" name="email" required />
                 <ValidationError
                   prefix="Email"
@@ -54,13 +50,13 @@ export default function Contact() {
                 />
               </label>
               <label>
-                <span>Phone</span>
+                <span>
+                  Phone <b>OPTIONAL</b>
+                </span>
                 <input type="number" name="phone" />
               </label>
               <label htmlFor="message">
-                <span>
-                  Message <b>*</b>
-                </span>
+                <span>Message</span>
                 <textarea id="message" name="message" required />
                 <ValidationError
                   prefix="Message"
