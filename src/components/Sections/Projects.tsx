@@ -7,6 +7,7 @@ import SubProject from "../Misc/SubProject";
 export default function Projects() {
   const [projects, setProjects] = useState<IProject[]>([]);
   const [techNames, setTechNames] = useState<string[]>([]);
+  const [hiddenTechNames, setHiddenTechNames] = useState<string[]>([]);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -14,22 +15,36 @@ export default function Projects() {
         const response = await fetch(`${baseUrl}/project`);
         const projects = await response.json();
         const names = projects.reduce<string[]>(
-          (acc, project) =>
+          (acc: any, project: any) =>
             project.acf.tech.reduce<string[]>(
               (acc2, tech) => [...acc2, tech.name],
               acc
             ),
           []
         );
-        const uniqueNames = Array.from(new Set(names));
+        const uniqueNames: any = Array.from(new Set(names));
         setTechNames(uniqueNames);
         setProjects(projects);
       } catch (error) {
         console.error(error);
       }
     };
+    const fetchHiddenTechNames = async () => {
+      try {
+        const response = await fetch(`${baseUrl}/hidden-tech-name`);
+        const r_hiddenTechNames = await response.json();
+        console.log(r_hiddenTechNames);
+        const newTechNames = r_hiddenTechNames.map(
+          (item: any) => item.acf.tech_name
+        );
+        setHiddenTechNames(newTechNames);
+      } catch (error) {
+        console.log(error);
+      }
+    };
 
     fetchProjects();
+    fetchHiddenTechNames();
   }, []);
 
   return (
@@ -53,11 +68,14 @@ export default function Projects() {
           ))}
         <h2 className="text-center">Other projects</h2>
         <div className="flex flex-row flex-wrap justify-center items-center w-full mx-auto gap-3">
-          {techNames.map((name) => (
-            <button className="btn" key={name}>
-              {name}
-            </button>
-          ))}
+          {techNames.map(
+            (name) =>
+              !hiddenTechNames.includes(name) && (
+                <button className="btn" key={name}>
+                  {name}
+                </button>
+              )
+          )}
         </div>
         <div className="flex items-center justify-center flex-row flex-wrap gap-3">
           {projects
