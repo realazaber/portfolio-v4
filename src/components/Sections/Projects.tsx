@@ -8,6 +8,7 @@ export default function Projects() {
   const [projects, setProjects] = useState<IProject[]>([]);
   const [techNames, setTechNames] = useState<string[]>([]);
   const [hiddenTechNames, setHiddenTechNames] = useState<string[]>([]);
+  const [selected, setSelected] = useState<string>("");
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -71,7 +72,11 @@ export default function Projects() {
           {techNames.map(
             (name) =>
               !hiddenTechNames.includes(name) && (
-                <button className="btn" key={name}>
+                <button
+                  onClick={() => setSelected(name)}
+                  className="btn"
+                  key={name}
+                >
                   {name}
                 </button>
               )
@@ -79,7 +84,12 @@ export default function Projects() {
         </div>
         <div className="flex items-center justify-center flex-row flex-wrap gap-3">
           {projects
-            .filter((project) => project.acf.is_main_project == "false")
+            .filter(
+              (project) =>
+                project.acf.is_main_project == "false" &&
+                (selected === "" ||
+                  project.acf.tech.some((tech) => tech.name === selected))
+            )
             .map((project, index) => (
               <SubProject
                 key={project.id}
