@@ -68,6 +68,9 @@ export default function Projects() {
             />
           ))}
         <h2 className="text-center">Other projects</h2>
+        <button onClick={() => setSelected("")} className="btn-sec mx-auto">
+          Clear filters
+        </button>
         <div className="flex flex-row flex-wrap justify-center items-center w-full mx-auto gap-3">
           {techNames.map(
             (name) =>
