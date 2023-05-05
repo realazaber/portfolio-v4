@@ -24,7 +24,7 @@ export default function TechStack() {
             </span>
             <span>
               <i className="fab fa-java text-[#f8981c]"></i>
-              Java + Java FX
+              Java + Java FX + Java Swing
             </span>
             <span>
               <i className="fa-solid fa-database text-[#d19231]"></i>
