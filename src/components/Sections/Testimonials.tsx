@@ -22,7 +22,7 @@ export default function Testimonials() {
 
   const [index, setIndex] = useState(0);
 
-  const handleSelect = (selectedIndex, e) => {
+  const handleSelect = (selectedIndex: any, e: any) => {
     setIndex(selectedIndex);
   };
   return (

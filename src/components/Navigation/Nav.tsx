@@ -8,7 +8,7 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
   const router = useRouter();
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: any) => {
     if (router.pathname !== "/") {
       router.push("/");
     }
@@ -21,8 +21,8 @@ export default function Nav() {
     <nav className="p-3 w-full flex flex-row justify-between items-center fixed top-0 left-0 right-0 z-50 bg-white z-10 mx-auto">
       <a onClick={() => scrollToSection("home")}>
         <Image
-          className="object-cover w-64 h-24"
-          src="/images/azaber.webp"
+          className="object-contain w-64 h-24"
+          src="/images/Logo.svg"
           width={100}
           height={100}
           alt="logo"

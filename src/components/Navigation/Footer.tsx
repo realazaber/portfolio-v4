@@ -8,7 +8,7 @@ export default function Footer() {
 
   const router = useRouter();
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: any) => {
     if (router.pathname !== "/") {
       router.push("/");
     }
@@ -20,13 +20,10 @@ export default function Footer() {
   return (
     <footer className="flex flex-row justify-between p-3">
       <div>
-        <a
-          className="text-pri hover:text-blue-700"
-          onClick={() => scrollToSection("home")}
-        >
+        <a onClick={() => scrollToSection("home")}>
           <Image
-            className="object-cover w-64 h-24"
-            src="/images/azaber.webp"
+            className="object-contain w-64 h-24"
+            src="/images/Logo.svg"
             width={100}
             height={100}
             alt="logo"

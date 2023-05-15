@@ -7,10 +7,12 @@ import Modal from "react-bootstrap/Modal";
 export default function Home() {
   const [open, setOpen] = useState(false);
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    element.scrollIntoView({ behavior: "smooth" });
-    setOpen(false);
+  const scrollToSection = (id: any) => {
+    const element: any = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setOpen(false);
+    }
   };
 
   const [showAus, setShowAus] = useState(false);

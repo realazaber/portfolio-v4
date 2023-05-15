@@ -13,12 +13,13 @@ export default function Projects() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch(`${baseUrl}/project`);
-        const projects = await response.json();
-        const names = projects.reduce<string[]>(
-          (acc: any, project: any) =>
+        const response: any = await fetch(`${baseUrl}/project`);
+        const projects: IProject[] = await response.json();
+
+        const names: string[] = projects.reduce<string[]>(
+          (acc: string[], project: IProject) =>
             project.acf.tech.reduce<string[]>(
-              (acc2, tech) => [...acc2, tech.name],
+              (acc2: string[], tech: any) => [...acc2, tech.name],
               acc
             ),
           []

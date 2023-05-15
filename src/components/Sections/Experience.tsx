@@ -36,9 +36,9 @@ export default function Experience() {
             Software Engineer internship
           </h4>
           <p>
-            I worked on the team with Gatsby and mainly trying out new
-            features from tanstack as well as from other libraries like
-            Tailwind. I also was responding to bug fix tickets.
+            I worked on the team with Gatsby and mainly trying out new features
+            from tanstack as well as from other libraries like Tailwind. I also
+            was responding to bug fix tickets.
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -51,8 +51,8 @@ export default function Experience() {
             Drupal Frontend Developer
           </h4>
           <p>
-            Helping the team work with the CMS with particular
-            focus on Drupal paragraphs, views and other modules.
+            Helping the team work with the CMS with particular focus on Drupal
+            paragraphs, views and other modules.
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -65,10 +65,9 @@ export default function Experience() {
             Associate Degree in Information Technology
           </h4>
           <p>
-            In this degree I completed projects and learned more 
-            about web programming, java programming, cyber security,
-            system administration and more. I have completed this
-            degree with a distinction.
+            In this degree I completed projects and learned more about web
+            programming, java programming, cyber security, system administration
+            and more. I have completed this degree with a distinction.
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -76,14 +75,15 @@ export default function Experience() {
           date="Jun 2016 - Dec 2016"
           icon={<i className="fab fa-unity text-gray-500"></i>}
         >
-          <h3 className="vertical-timeline-element-title">Academy of Interactive Entertainment</h3>
+          <h3 className="vertical-timeline-element-title">
+            Academy of Interactive Entertainment
+          </h3>
           <h4 className="vertical-timeline-element-subtitle">
             Cert II & III in Information and Digital Media
           </h4>
           <p>
-            In the Cert II I created web games in javascript.
-            In the Cert III we started using Unity 3D with C#;
-            I also made use of OOP tecniques.
+            In the Cert II I created web games in javascript. In the Cert III we
+            started using Unity 3D with C#; I also made use of OOP tecniques.
           </p>
         </VerticalTimelineElement>
       </VerticalTimeline>

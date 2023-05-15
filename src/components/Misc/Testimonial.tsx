@@ -1,4 +1,4 @@
-export default function Testimonial(props) {
+export default function Testimonial(props: any) {
   return (
     <div className="min-w-[75vw] min-h-[20rem] flex flex-col justify-center items-center shadow-md w-full rounded-md py-3 px-5 text-sec">
       <h3 className="text-sec font-bold">{props.title}</h3>
