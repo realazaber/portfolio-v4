@@ -1,7 +1,7 @@
 import Link from "next/link";
 export default function SubProject(props: any) {
   return (
-    <div className="h-[150px] flex flex-col justify-center items-center hover:shadow-md hover:cursor-pointer rounded-md p-3 border-2 border-accent w-full tablet:w-1/3 desktop:w-1/4">
+    <div className="h-[150px] flex flex-col justify-center items-center hover:shadow-md hover:cursor-pointer rounded-md p-3 border-2 border-slate-300 w-full tablet:w-1/3 desktop:w-1/4">
       <Link href={`/projects/${props.id}`}>
         <h3 className="text-pri text-center text-2xl h-16">{props.title}</h3>
       </Link>
