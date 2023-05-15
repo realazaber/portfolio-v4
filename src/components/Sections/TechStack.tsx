@@ -72,6 +72,10 @@ export default function TechStack() {
               <i className="fab fa-wordpress text-[#21759b]"></i>
               Wordpress
             </span>
+            <span>
+              <i className="fab fa-shopify text-[#8eb544]"></i>
+              Shopify
+            </span>
           </ul>
         </div>
         <div className="w-full tablet:w-1/4">
