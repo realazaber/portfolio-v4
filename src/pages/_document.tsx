@@ -23,7 +23,6 @@ export default function Document() {
           `,
           }}
         />
-        <title>Azaber Portfolio</title>
       </Head>
       <body className="flex flex-col">
         <Main />

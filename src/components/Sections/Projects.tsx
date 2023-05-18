@@ -73,19 +73,20 @@ export default function Projects() {
           Clear filters
         </button>
         <div className="flex flex-row flex-wrap justify-center items-center w-full mx-auto gap-3">
-          {techNames.map(
-            (name) =>
-              !hiddenTechNames.includes(name) && (
-                <button
-                  onClick={() => setSelected(name)}
-                  className="btn"
-                  key={name}
-                >
-                  {name}
-                </button>
-              )
-          )}
+          {techNames
+            .filter((name) => !hiddenTechNames.includes(name))
+            .sort()
+            .map((name) => (
+              <button
+                onClick={() => setSelected(name)}
+                className="btn"
+                key={name}
+              >
+                {name}
+              </button>
+            ))}
         </div>
+
         <div className="flex items-center justify-center flex-row flex-wrap gap-3">
           {projects
             .filter(
