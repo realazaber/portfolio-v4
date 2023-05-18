@@ -30,7 +30,7 @@ export default function Bio() {
               I have over a year experience in the Software Development and
               Cyber Security Industry. I am currently proficient in frontend,
               especially with React and Angular, I am now improving my skills
-              with backend with a focus on Laravel, a PHP framework.
+              with backend with PHP Laravel and .NET Framework.
               <i className="block mt-3">
                 I treat the word impossible as nothing more than motivation.
               </i>
