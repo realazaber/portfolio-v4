@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
 import { Typewriter } from "react-simple-typewriter";
@@ -9,7 +8,7 @@ export default function Bio() {
       <div className="container flex flex-col tablet:flex-row gap-3 justify-center items-center mx-auto p-3">
         <div className="w-full tablet:w-2/5 flex justify-center tablet:justify-end">
           <Slide left>
-            <Image src="/images/me.webp" width={300} height={300} alt="me" />
+            <img src="/images/me.webp" alt="me" />
           </Slide>
         </div>
         <Fade>

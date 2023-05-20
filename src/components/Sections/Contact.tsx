@@ -1,6 +1,5 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import Image from "next/image";
 import Slide from "react-reveal/Slide";
 
 export default function Contact() {
@@ -12,13 +11,7 @@ export default function Contact() {
         <div className="container text-center flex flex-col justify-center items-center gap-5">
           <Slide up>
             <h2>Thanks for contacting me!</h2>
-            <Image
-              className="w-52 h-52 object-contain"
-              src={"/images/thanks.gif"}
-              height={300}
-              width={300}
-              alt="me"
-            />
+            <img className="object-contain" src="/images/thanks.gif" alt="me" />
           </Slide>
         </div>
       </section>
@@ -66,11 +59,9 @@ export default function Contact() {
               </label>
             </div>
             <div className="w-full tablet:w-1/2 h-full">
-              <Image
+              <img
                 className="w-full h-full object-cover rounded-md tablet:h-[30rem]"
-                src={"/images/do_it.gif"}
-                height={300}
-                width={300}
+                src="/images/do_it.gif"
                 alt="contact"
               />
             </div>

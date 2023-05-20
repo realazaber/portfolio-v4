@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Slide from "react-reveal/Slide";
@@ -55,12 +54,7 @@ export default function Home() {
       <Slide up cascade>
         <div className="mx-auto max-w-[90%] grid grid-cols-1 grid-rows grid-cols-2 tablet:grid-cols-4 tablet:grid-rows-3 gap-4">
           <div className="cell col-span-2 tablet:col-span-1" onClick={m_showMe}>
-            <Image
-              src="/images/me.webp"
-              alt="me"
-              width={100}
-              height={100}
-            ></Image>
+            <img src="/images/me.webp" alt="me" width={100} height={100} />
           </div>
           <div
             className="col-span-2 cell flex-wrap"

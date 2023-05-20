@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -21,11 +20,9 @@ export default function Footer() {
     <footer className="flex flex-row justify-between p-3">
       <div>
         <a onClick={() => scrollToSection("home")}>
-          <Image
+          <img
             className="object-contain w-64 h-24"
             src="/images/Logo.svg"
-            width={100}
-            height={100}
             alt="logo"
           />
         </a>
