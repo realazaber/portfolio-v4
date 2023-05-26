@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Image from "next/image";
 import MobileNav from "./MobileNav";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -20,11 +19,9 @@ export default function Nav() {
   return (
     <nav className="p-3 w-full flex flex-row justify-between items-center fixed top-0 left-0 right-0 z-50 bg-white z-10 mx-auto">
       <a onClick={() => scrollToSection("home")}>
-        <Image
+        <img
           className="object-contain w-64 h-24"
           src="/images/Logo.svg"
-          width={100}
-          height={100}
           alt="logo"
         />
       </a>

@@ -12,6 +12,12 @@
   html {
     body {
 
+      #mobileNav {
+        a {
+          @apply py-3 text-pri text-2xl font-bold w-full text-center;
+        }
+      }
+
       @apply scrollbar-thin scrollbar-thumb-pri scrollbar-track-slate-400;
       a {
         @apply hover:cursor-pointer text-blue-500 hover:text-blue-700 no-underline;
