@@ -12,7 +12,7 @@ export default function MainProject(props: any) {
           props.reverse ? "phone:ml-[-3rem]" : "phone:mr-[-3rem]"
         }`}
       >
-        <Link href={`projects/${props.id}`} target="_blank">
+        <Link href={`projects/${props.id}`}>
           <h2 className="text-2xl phone:text-3xl text-center text-white">
             {props.title}
           </h2>
@@ -49,14 +49,13 @@ export default function MainProject(props: any) {
         <Link
           className="text-white justify-center items-center my-3 mx-auto w-full flex gap-1 items-center"
           href={`projects/${props.id}`}
-          target="_blank"
         >
           Case study
           <i className="fas fa-book text-white"></i>
         </Link>
       </div>
       <div className="w-full phone:w-1/2 h-full">
-        <Link href={`projects/${props.id}`} target="_blank">
+        <Link href={`projects/${props.id}`}>
           <img
             className="object-cover max-h-[28rem] w-full rounded-t-md phone:rounded-md"
             src={props.image}
