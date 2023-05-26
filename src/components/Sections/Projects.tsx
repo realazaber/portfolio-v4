@@ -9,6 +9,7 @@ export default function Projects() {
   const [techNames, setTechNames] = useState<string[]>([]);
   const [hiddenTechNames, setHiddenTechNames] = useState<string[]>([]);
   const [selected, setSelected] = useState<string>("");
+  const [displayedSubprojects, setDisplayedSubprojects] = useState<number>(6);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -48,6 +49,10 @@ export default function Projects() {
     fetchProjects();
     fetchHiddenTechNames();
   }, []);
+
+  const handleLoadMore = () => {
+    setDisplayedSubprojects(displayedSubprojects + 6);
+  };
 
   return (
     <section id="projects">
@@ -95,6 +100,7 @@ export default function Projects() {
                 (selected === "" ||
                   project.acf.tech.some((tech) => tech.name === selected))
             )
+            .slice(0, displayedSubprojects)
             .map((project, index) => (
               <SubProject
                 key={project.id}
@@ -105,6 +111,18 @@ export default function Projects() {
               />
             ))}
         </div>
+
+        {displayedSubprojects <
+          projects.filter(
+            (project) =>
+              project.acf.is_main_project == "false" &&
+              (selected === "" ||
+                project.acf.tech.some((tech) => tech.name === selected))
+          ).length && (
+          <button onClick={handleLoadMore} className="btn-sec mx-auto">
+            Load More
+          </button>
+        )}
       </div>
     </section>
   );
