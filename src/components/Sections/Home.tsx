@@ -83,10 +83,7 @@ export default function Home() {
           </div>
 
           <div className="bg-[#0966c2] col-span-1 border-none cell">
-            <Link
-              href="https://www.linkedin.com/in/alexander-zaborski-a7b7951a4/"
-              target="_blank"
-            >
+            <Link href="https://linkedin.com/in/azaber" target="_blank">
               <i className="fa-brands fa-linkedin-in text-white text-3xl"></i>
             </Link>
           </div>
