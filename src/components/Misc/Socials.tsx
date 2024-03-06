@@ -9,7 +9,7 @@ const Socials = () => {
     }
   };
   return (
-    <div className="phone:fixed top-[40%] left-0 hover:cursor-pointer">
+    <div className="phone:fixed top-[40%] left-0 hover:cursor-pointer z-50">
       <div className="bg-[#21262d] p-3">
         <Link href="https://github.com/realazaber" target="_blank">
           <i className="fa-brands fa-github text-white text-3xl"></i>

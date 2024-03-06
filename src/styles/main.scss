@@ -9,9 +9,31 @@
     @apply duration-300 scroll-smooth;
   }
 
+  #strong-points {
+    .item {
+      @apply block;
+      span {
+        @apply inline;
+      }
+    }
+  }
+
+  #hero {
+    h1,
+    h2,
+    p {
+      @apply text-slate-200;
+      strong {
+        @apply text-slate-200;
+      }
+    }
+    button {
+      @apply border-[1px] border-slate-200 p-2 rounded-none text-xl;
+    }
+  }
+
   html {
     body {
-
       #mobileNav {
         a {
           @apply py-3 text-pri text-2xl font-bold w-full text-center;

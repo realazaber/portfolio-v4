@@ -6,7 +6,6 @@ import Projects from "@/components/Sections/Projects";
 import Testimonials from "@/components/Sections/Testimonials";
 import Contact from "@/components/Sections/Contact";
 import Head from "next/head";
-import Socials from "@/components/Misc/Socials";
 
 export default function Index() {
   return (
@@ -21,7 +20,6 @@ export default function Index() {
       <Projects />
       <Testimonials />
       <Contact />
-      <Socials />
     </>
   );
 }
